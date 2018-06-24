@@ -1,0 +1,18 @@
+# 0x8  HD=3  NONE  Example: Len=1 {0} (0x8) (Bits=2)
+0x8 {}
+# 0x9  HD=3  len=11  Example: Len=12 {0} (0x8) (Bits=2)
+# 0x9  HD=4  NONE  Example: Len=1 {0} (0x9) (Bits=3)
+0x9 {11}
+# 0xb  HD=3  len=3  Example: Len=4 {0} (0x8) (Bits=2)
+# 0xb  HD=4  len=3  Example: Len=4 {0} (0x8) (Bits=2)
+# 0xb  HD=5  NONE  Example: Len=1 {0} (0xb) (Bits=4)
+0xb {3,3}
+# 0xe  HD=3  len=3  Example: Len=4 {0} (0x8) (Bits=2)
+# 0xe  HD=4  len=3  Example: Len=4 {0} (0x8) (Bits=2)
+# 0xe  HD=5  NONE  Example: Len=1 {0} (0xe) (Bits=4)
+0xe {3,3}
+# 0xf  HD=3  len=1  Example: Len=2 {0} (0x8) (Bits=2)
+# 0xf  HD=4  len=1  Example: Len=2 {0} (0x8) (Bits=2)
+# 0xf  HD=5  len=1  Example: Len=2 {0} (0x8) (Bits=2)
+# 0xf  HD=6  NONE  Example: Len=1 {0} (0xf) (Bits=5)
+0xf {1,1,1}

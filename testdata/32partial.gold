@@ -1,0 +1,45 @@
+# 0x80000057  HD=5  len=2770  Example: Len=2771 {0,359,1379} (0x80000000) (Bits=4)
+# 0x80000057  HD=6  len=325  Example: Len=326 {0,75,185,296} (0x80000000) (Bits=5)
+# 0x80000057  HD=7  len=2  Example: Len=3 {0,1} (0xa0000042) (Bits=6)
+# 0x80000057  HD=8  NONE  Example: Len=1 {0} (0x80000057) (Bits=7)
+0x80000057 {?,?,2770,325,2}
+# 0x82608edb  HD=5  len=2974  Example: Len=2975 {0,2215,2866} (0x80000000) (Bits=4)
+# 0x82608edb  HD=6  len=268  Example: Len=269 {0,89,117,155} (0x80000000) (Bits=5)
+# 0x82608edb  HD=7  len=171  Example: Len=172 {0,79,85,123} (0x80004000) (Bits=6)
+# 0x82608edb  HD=8  len=91  Example: Len=92 {0,45,53,74,80} (0x90000000) (Bits=7)
+0x82608edb {?,?,2974,268,171,91,?,?,?,?,?,?,?}
+# 0x8f6e37a0  HD=5  len=5243  Example: Len=5244 {0,2751,4508} (0x80000000) (Bits=4)
+# 0x8f6e37a0  HD=6  len=5243  Example: Len=5244 {0,2751,4508} (0x80000000) (Bits=4)
+# 0x8f6e37a0  HD=7  len=177  Example: Len=178 {0,14,39,54,144} (0x80000000) (Bits=6)
+# 0x8f6e37a0  HD=8  len=177  Example: Len=178 {0,14,39,54,144} (0x80000000) (Bits=6)
+0x8f6e37a0 {?,?,5243,5243,177,177,?,?,?,?,?,?,?,?,?,?}
+# 0x80002b8d  HD=5  len=3525  Example: Len=3526 {0,173,2729} (0x80000000) (Bits=4)
+# 0x80002b8d  HD=6  len=3525  Example: Len=3526 {0,173,2729} (0x80000000) (Bits=4)
+# 0x80002b8d  HD=7  len=176  Example: Len=177 {0,48,112,175} (0x80000200) (Bits=6)
+# 0x80002b8d  HD=8  len=176  Example: Len=177 {0,48,112,175} (0x80000200) (Bits=6)
+0x80002b8d {?,?,3525,3525,176,176,?,?}
+# 0xc0a0a0d5  HD=5  len=2275  Example: Len=2276 {0,2098,2144} (0x80000000) (Bits=4)
+# 0xc0a0a0d5  HD=6  len=2275  Example: Len=2276 {0,2098,2144} (0x80000000) (Bits=4)
+# 0xc0a0a0d5  HD=7  len=160  Example: Len=161 {0,9,13,94,132} (0x80000000) (Bits=6)
+# 0xc0a0a0d5  HD=8  len=160  Example: Len=161 {0,9,13,94,132} (0x80000000) (Bits=6)
+0xc0a0a0d5 {?,?,2275,2275,160,160,?,?,?,?}
+# 0x973afb51  HD=5  len=4159  Example: Len=4160 {0,2661,3862} (0x80000000) (Bits=4)
+# 0x973afb51  HD=6  len=4159  Example: Len=4160 {0,2661,3862} (0x80000000) (Bits=4)
+# 0x973afb51  HD=7  len=173  Example: Len=174 {0,59,119,165} (0xc0000000) (Bits=6)
+# 0x973afb51  HD=8  len=173  Example: Len=174 {0,59,119,165} (0xc0000000) (Bits=6)
+0x973afb51 {?,?,4159,4159,173,173,?,?,?,?,?,?,?,?,?,?,?,?}
+# 0xe89061db  HD=5  len=2782  Example: Len=2783 {0,292,740} (0x80000000) (Bits=4)
+# 0xe89061db  HD=6  len=2782  Example: Len=2783 {0,292,740} (0x80000000) (Bits=4)
+# 0xe89061db  HD=7  len=128  Example: Len=129 {0,12,48,52,62} (0x80000000) (Bits=6)
+# 0xe89061db  HD=8  len=128  Example: Len=129 {0,12,48,52,62} (0x80000000) (Bits=6)
+0xe89061db {?,?,2782,2782,128,128,?,?,?,?,?,?,?,?}
+# 0x82408edb  HD=5  len=1746  Example: Len=1747 {0,217,1313} (0x80000000) (Bits=4)
+# 0x82408edb  HD=6  len=1746  Example: Len=1747 {0,217,1313} (0x80000000) (Bits=4)
+# 0x82408edb  HD=7  len=120  Example: Len=121 {0,46,77,90} (0x80000008) (Bits=6)
+# 0x82408edb  HD=8  len=120  Example: Len=121 {0,46,77,90} (0x80000008) (Bits=6)
+0x82408edb {?,?,1746,1746,120,120,?,?,?,?,?,?}
+# 0xa094afb5  HD=5  len=19  Example: Len=20 {0} (0x80000000) (Bits=2)
+# 0xa094afb5  HD=6  len=19  Example: Len=20 {0} (0x80000000) (Bits=2)
+# 0xa094afb5  HD=7  len=19  Example: Len=20 {0} (0x80000000) (Bits=2)
+# 0xa094afb5  HD=8  len=19  Example: Len=20 {0} (0x80000000) (Bits=2)
+0xa094afb5 {?,?,19,19,19,19,?,?,?,?,?,?,?,?,?}

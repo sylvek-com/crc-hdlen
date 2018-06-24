@@ -1,0 +1,21 @@
+Hamming Distance CRC Polyonmial Evaluation  Version 1.1
+To do a quick compile and sanity check:
+   ./fastbuild.me
+   
+To do a more thorough build and validation:
+   ./build.me
+   
+See comments at top of hdlen.cpp of usage
+
+// Version 1.1.0  August 27, 2016
+// Copyright 2015-2016, Philip Koopman  koopman@cmu.edu
+// Creative Commons Attribution-ShareAlike 4.0 International
+//       http://creativecommons.org/licenses/by-sa/4.0/
+// No warranty express or implied; use at your own risk
+// User assumes responsibility for validating suitability for use
+// We suggest using the non-optimized version for validation.
+//
+// Written as 64-bit code for g++ 5.3.0 but beware of portability problems 
+//  Compile with:   g++ -O4 hdlen.cpp -DOPTZ -o hdlen -std=c++11
+// Supports up to 64-bit CRCs, but realistically good large CRCs are going
+//   to be too slow to compute to get all HD values   

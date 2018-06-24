@@ -1,0 +1,21 @@
+rm hdlen.exe
+g++ -O4 -DOPTZ hdlen.cpp -o hdlen -std=c++11
+rm testresults/8bits.fast
+rm testresults/8bits.slow
+rm testresults/16bits.fast
+rm testresults/16bits.slow
+echo ============================================================
+echo QUICK TEST Computing Optimized Version Results
+./hdlen <testdata/8bits.txt >testresults/8bits.fast
+./hdlen <testdata/16bits.txt >testresults/16bits.fast
+./hdlen 0x9b          >testresults/qother.fast
+./hdlen 0x9b 3 5      >>testresults/qother.fast
+./hdlen 0x9b 4 8      >>testresults/qother.fast
+echo ============================================================
+echo QUICK TEST Here is list of optimized code errors
+diff testresults/8bits.fast testdata/8bits.gold
+diff testresults/16bits.fast testdata/16bits.gold
+diff testresults/qother.fast testdata/qother.gold
+echo ============================================================
+echo QUICK TESTING COMPLETED!   You should run the full build.me
+echo ============================================================

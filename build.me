@@ -1,0 +1,221 @@
+rm hdlen.exe
+rm hdlenslow.exe
+
+g++ -O4        hdlen.cpp -std=c++11 -o hdlenslow \
+   -g -Wall -Weffc++ -pedantic  \
+   -pedantic-errors -Wextra -Waggregate-return -Wcast-align \
+   -Wcast-qual  -Wchar-subscripts  -Wcomment -Wconversion \
+   -Wdisabled-optimization \
+   -Werror -Wfloat-equal  -Wformat  -Wformat=2 \
+   -Wformat-nonliteral -Wformat-security  \
+   -Wformat-y2k -Wimport  -Winit-self  -Winline -Winvalid-pch \
+   -Wunsafe-loop-optimizations  -Wlong-long -Wmissing-braces \
+   -Wmissing-field-initializers -Wmissing-format-attribute   \
+   -Wmissing-include-dirs -Wmissing-noreturn \
+   -Wpacked  -Wpadded -Wparentheses  -Wpointer-arith \
+   -Wredundant-decls -Wreturn-type \
+   -Wsequence-point  -Wshadow -Wsign-compare  -Wstack-protector \
+   -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch  -Wswitch-default \
+   -Wswitch-enum -Wtrigraphs  -Wuninitialized \
+   -Wunknown-pragmas  -Wunreachable-code -Wunused \
+   -Wunused-function  -Wunused-label  -Wunused-parameter \
+   -Wunused-value  -Wunused-variable  -Wvariadic-macros \
+   -Wvolatile-register-var  -Wwrite-strings   
+	
+g++ -O4 -DOPTZ hdlen.cpp -std=c++11 -o hdlen
+rm testresults/*.fast
+rm testresults/*.slow
+
+echo ============================================================
+echo Computing Optimized Version Results
+./hdlen <testdata/4bits.txt >testresults/4bits.fast
+diff  testresults/4bits.fast    testdata/4bits.gold
+
+./hdlen <testdata/5bits.txt >testresults/5bits.fast
+diff  testresults/5bits.fast    testdata/5bits.gold
+
+./hdlen <testdata/6bits.txt >testresults/6bits.fast
+diff  testresults/6bits.fast    testdata/6bits.gold
+
+./hdlen <testdata/7bits.txt >testresults/7bits.fast
+diff  testresults/7bits.fast    testdata/7bits.gold
+
+./hdlen <testdata/8bits.txt >testresults/8bits.fast
+diff  testresults/8bits.fast    testdata/8bits.gold
+
+./hdlen <testdata/9bits.txt >testresults/9bits.fast
+diff  testresults/9bits.fast    testdata/9bits.gold
+
+./hdlen <testdata/10bits.txt >testresults/10bits.fast
+diff  testresults/10bits.fast    testdata/10bits.gold
+
+./hdlen <testdata/11bits.txt >testresults/11bits.fast
+diff  testresults/11bits.fast    testdata/11bits.gold
+
+./hdlen <testdata/12bits.txt >testresults/12bits.fast
+diff  testresults/12bits.fast    testdata/12bits.gold
+
+./hdlen <testdata/13bits.txt >testresults/13bits.fast
+diff  testresults/13bits.fast    testdata/13bits.gold
+
+./hdlen <testdata/14bits.txt >testresults/14bits.fast
+diff  testresults/14bits.fast    testdata/14bits.gold
+
+./hdlen <testdata/15bits.txt >testresults/15bits.fast
+diff  testresults/15bits.fast    testdata/15bits.gold
+
+./hdlen <testdata/16bits.txt >testresults/16bits.fast
+diff  testresults/16bits.fast    testdata/16bits.gold
+
+./hdlen <testdata/17bits.txt >testresults/17bits.fast
+diff  testresults/17bits.fast    testdata/17bits.gold
+
+./hdlen <testdata/18bits.txt >testresults/18bits.fast
+diff  testresults/18bits.fast    testdata/18bits.gold
+
+./hdlen <testdata/19bits.txt >testresults/19bits.fast
+diff  testresults/19bits.fast    testdata/19bits.gold
+
+./hdlen <testdata/20bits.txt >testresults/20bits.fast
+diff  testresults/20bits.fast    testdata/20bits.gold
+
+./hdlen <testdata/21bits.txt >testresults/21bits.fast
+diff  testresults/21bits.fast    testdata/21bits.gold
+
+./hdlen <testdata/22bits.txt >testresults/22bits.fast
+diff  testresults/22bits.fast    testdata/22bits.gold
+
+./hdlen <testdata/23bits.txt >testresults/23bits.fast
+diff  testresults/23bits.fast    testdata/23bits.gold
+
+./hdlen <testdata/24bits.txt >testresults/24bits.fast
+diff  testresults/24bits.fast    testdata/24bits.gold
+
+./hdlen <testdata/32bits.txt >testresults/32bits.fast
+diff  testresults/32bits.fast    testdata/32bits.gold
+
+./hdlen <testdata/40bits.txt >testresults/40bits.fast
+diff  testresults/40bits.fast    testdata/40bits.gold
+
+./hdlen <testdata/64bits.txt >testresults/64bits.fast
+diff  testresults/64bits.fast    testdata/64bits.gold
+
+./hdlen 5 8 <testdata/32bits.txt >testresults/32partial.fast
+diff testresults/32partial.fast testdata/32partial.gold
+
+./hdlen 0x82608edb >testresults/other.fast
+./hdlen 0x82608edb 5 7 >>testresults/other.fast
+diff testresults/other.fast testdata/other.gold
+
+
+echo ============================================================
+echo Computing Non-Optimized Version Results
+./hdlenslow <testdata/4bits.txt >testresults/4bits.slow
+diff      testresults/4bits.slow    testdata/4bits.gold
+
+./hdlenslow <testdata/5bits.txt >testresults/5bits.slow
+diff      testresults/5bits.slow    testdata/5bits.gold
+
+./hdlenslow <testdata/6bits.txt >testresults/6bits.slow
+diff      testresults/6bits.slow    testdata/6bits.gold
+
+./hdlenslow <testdata/7bits.txt >testresults/7bits.slow
+diff      testresults/7bits.slow    testdata/7bits.gold
+
+./hdlenslow <testdata/8bits.txt >testresults/8bits.slow
+diff      testresults/8bits.slow    testdata/8bits.gold
+
+./hdlenslow <testdata/9bits.txt >testresults/9bits.slow
+diff      testresults/9bits.slow    testdata/9bits.gold
+
+./hdlenslow <testdata/10bits.txt >testresults/10bits.slow
+diff      testresults/10bits.slow    testdata/10bits.gold
+
+./hdlenslow <testdata/11bits.txt >testresults/11bits.slow
+diff      testresults/11bits.slow    testdata/11bits.gold
+
+./hdlenslow <testdata/12bits.txt >testresults/12bits.slow
+diff      testresults/12bits.slow    testdata/12bits.gold
+
+# ./hdlenslow <testdata/13bits.txt >testresults/13bits.slow
+# ./hdlenslow <testdata/14bits.txt >testresults/14bits.slow
+# ./hdlenslow <testdata/15bits.txt >testresults/15bits.slow
+# ./hdlenslow <testdata/16bits.txt >testresults/16bits.slow
+# ./hdlenslow <testdata/17bits.txt >testresults/17bits.slow
+# ./hdlenslow <testdata/18bits.txt >testresults/18bits.slow
+# ./hdlenslow <testdata/19bits.txt >testresults/19bits.slow
+# ./hdlenslow <testdata/20bits.txt >testresults/20bits.slow
+# ./hdlenslow <testdata/21bits.txt >testresults/21bits.slow
+# ./hdlenslow <testdata/22bits.txt >testresults/22bits.slow
+# ./hdlenslow <testdata/23bits.txt >testresults/23bits.slow
+# ./hdlenslow <testdata/24bits.txt >testresults/24bits.slow
+# ./hdlenslow <testdata/32bits.txt >testresults/32bits.slow
+# ./hdlenslow <testdata/40bits.txt >testresults/40bits.slow
+
+./hdlenslow <testdata/64bits.txt >testresults/64bits.slow
+diff      testresults/64bits.slow    testdata/64bits.gold
+
+# ./hdlenslow 5 8 <testdata/32bits.txt >testresults/32partial.slow
+# ./hdlenslow 0x82608edb >testresults/other.slow
+# ./hdlenslow 0x82608edb 5 7 >>testresults/other.slow
+
+
+echo ============================================================
+echo Aggregated list of optimized code errors
+diff testresults/4bits.fast testdata/4bits.gold
+diff testresults/5bits.fast testdata/5bits.gold
+diff testresults/6bits.fast testdata/6bits.gold
+diff testresults/7bits.fast testdata/7bits.gold
+diff testresults/8bits.fast testdata/8bits.gold
+diff testresults/9bits.fast testdata/9bits.gold
+diff testresults/10bits.fast testdata/10bits.gold
+diff testresults/11bits.fast testdata/11bits.gold
+diff testresults/12bits.fast testdata/12bits.gold
+diff testresults/13bits.fast testdata/13bits.gold
+diff testresults/14bits.fast testdata/14bits.gold
+diff testresults/15bits.fast testdata/15bits.gold
+diff testresults/16bits.fast testdata/16bits.gold
+diff testresults/17bits.fast testdata/17bits.gold
+diff testresults/18bits.fast testdata/18bits.gold
+diff testresults/19bits.fast testdata/19bits.gold
+diff testresults/20bits.fast testdata/20bits.gold
+diff testresults/21bits.fast testdata/21bits.gold
+diff testresults/22bits.fast testdata/22bits.gold
+diff testresults/23bits.fast testdata/23bits.gold
+diff testresults/24bits.fast testdata/24bits.gold
+diff testresults/32bits.fast testdata/32bits.gold
+diff testresults/40bits.fast testdata/40bits.gold
+diff testresults/64bits.fast testdata/64bits.gold
+diff testresults/32partial.fast testdata/32partial.gold
+diff testresults/other.fast testdata/other.gold
+echo ============================================================
+echo Aggregated list of non-optimized code errors
+diff testresults/4bits.slow testdata/4bits.gold
+diff testresults/5bits.slow testdata/5bits.gold
+diff testresults/6bits.slow testdata/6bits.gold
+diff testresults/7bits.slow testdata/7bits.gold
+diff testresults/8bits.slow testdata/8bits.gold
+diff testresults/9bits.slow testdata/9bits.gold
+diff testresults/10bits.slow testdata/10bits.gold
+diff testresults/11bits.slow testdata/11bits.gold
+diff testresults/12bits.slow testdata/12bits.gold
+# diff testresults/13bits.slow testdata/13bits.gold
+# diff testresults/14bits.slow testdata/14bits.gold
+# diff testresults/15bits.slow testdata/15bits.gold
+# diff testresults/16bits.slow testdata/16bits.gold
+# diff testresults/17bits.slow testdata/17bits.gold
+# diff testresults/18bits.slow testdata/18bits.gold
+# diff testresults/19bits.slow testdata/19bits.gold
+# diff testresults/20bits.slow testdata/20bits.gold
+# diff testresults/21bits.slow testdata/21bits.gold
+# diff testresults/22bits.slow testdata/22bits.gold
+# diff testresults/23bits.slow testdata/23bits.gold
+# diff testresults/24bits.slow testdata/24bits.gold
+# diff testresults/32bits.slow testdata/32bits.gold
+# diff testresults/40bits.slow testdata/40bits.gold
+diff testresults/64bits.slow testdata/64bits.gold
+# diff testresults/32partial.slow testdata/32partial.gold
+# diff testresults/other.slow testdata/other.gold
+echo ============================================================
+echo TESTING COMPLETED!
+echo ============================================================

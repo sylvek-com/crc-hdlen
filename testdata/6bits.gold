@@ -1,0 +1,27 @@
+# 0x33  HD=3  len=57  Example: Len=58 {0} (0x20) (Bits=2)
+# 0x33  HD=4  len=5  Example: Len=6 {0} (0x24) (Bits=3)
+# 0x33  HD=5  len=1  Example: Len=2 {0} (0x2a) (Bits=4)
+# 0x33  HD=6  NONE  Example: Len=1 {0} (0x33) (Bits=5)
+0x33 {57,5,1}
+# 0x21  HD=3  len=57  Example: Len=58 {0} (0x20) (Bits=2)
+# 0x21  HD=4  NONE  Example: Len=1 {0} (0x21) (Bits=3)
+0x21 {57}
+# 0x23  HD=3  len=25  Example: Len=26 {0} (0x20) (Bits=2)
+# 0x23  HD=4  len=25  Example: Len=26 {0} (0x20) (Bits=2)
+# 0x23  HD=5  NONE  Example: Len=1 {0} (0x23) (Bits=4)
+0x23 {25,25}
+# 0x2c  HD=3  len=25  Example: Len=26 {0} (0x20) (Bits=2)
+# 0x2c  HD=4  len=25  Example: Len=26 {0} (0x20) (Bits=2)
+# 0x2c  HD=5  NONE  Example: Len=1 {0} (0x2c) (Bits=4)
+0x2c {25,25}
+# 0x37  HD=3  len=25  Example: Len=26 {0} (0x20) (Bits=2)
+# 0x37  HD=4  len=25  Example: Len=26 {0} (0x20) (Bits=2)
+# 0x37  HD=5  len=1  Example: Len=2 {0} (0x2c) (Bits=4)
+# 0x37  HD=6  len=1  Example: Len=2 {0} (0x2c) (Bits=4)
+# 0x37  HD=7  NONE  Example: Len=1 {0} (0x37) (Bits=6)
+0x37 {25,25,1,1}
+# 0x2e  HD=3  len=9  Example: Len=10 {0} (0x20) (Bits=2)
+# 0x2e  HD=4  len=9  Example: Len=10 {0} (0x20) (Bits=2)
+# 0x2e  HD=5  len=2  Example: Len=3 {0} (0x25) (Bits=4)
+# 0x2e  HD=6  NONE  Example: Len=1 {0} (0x2e) (Bits=5)
+0x2e {9,9,2}

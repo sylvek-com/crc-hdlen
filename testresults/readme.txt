@@ -1,0 +1,1 @@
+This directory stores temporary test results
