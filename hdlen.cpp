@@ -102,7 +102,7 @@ class HDLen{
  
  private:
    Poly_t   hPoly = 0;
-   Length_t hDLengths[maxNumWeights+1] = {}; // initialize to 0; constructor re-initializes
+   Length_t hDLengths[maxNumWeights+2] = {}; // initialize to 0; constructor re-initializes
 
  public:
             HDLen(Poly_t poly);
